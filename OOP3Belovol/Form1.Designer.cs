@@ -37,6 +37,8 @@
             label3 = new Label();
             label4 = new Label();
             lblResult = new Label();
+            radioInteger = new RadioButton();
+            radioReal = new RadioButton();
             SuspendLayout();
             // 
             // btnCalculate
@@ -47,6 +49,7 @@
             btnCalculate.TabIndex = 0;
             btnCalculate.Text = "Результат";
             btnCalculate.UseVisualStyleBackColor = true;
+            btnCalculate.Click += btnCalculate_Click;
             // 
             // txtNum1
             // 
@@ -113,11 +116,35 @@
             lblResult.Size = new Size(0, 15);
             lblResult.TabIndex = 8;
             // 
+            // radioInteger
+            // 
+            radioInteger.AutoSize = true;
+            radioInteger.Location = new Point(30, 89);
+            radioInteger.Name = "radioInteger";
+            radioInteger.Size = new Size(223, 19);
+            radioInteger.TabIndex = 9;
+            radioInteger.TabStop = true;
+            radioInteger.Text = "використовувати числа типу Integer";
+            radioInteger.UseVisualStyleBackColor = true;
+            // 
+            // radioReal
+            // 
+            radioReal.AutoSize = true;
+            radioReal.Location = new Point(284, 89);
+            radioReal.Name = "radioReal";
+            radioReal.Size = new Size(208, 19);
+            radioReal.TabIndex = 10;
+            radioReal.TabStop = true;
+            radioReal.Text = "використовувати числа типу Real";
+            radioReal.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(527, 211);
+            Controls.Add(radioReal);
+            Controls.Add(radioInteger);
             Controls.Add(lblResult);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -144,5 +171,7 @@
         private Label label3;
         private Label label4;
         private Label lblResult;
+        private RadioButton radioInteger;
+        private RadioButton radioReal;
     }
 }
